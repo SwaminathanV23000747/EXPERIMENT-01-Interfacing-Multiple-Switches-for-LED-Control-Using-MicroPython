@@ -34,6 +34,7 @@ USB Cable
 
 <img width="1293" height="744" alt="image" src="https://github.com/user-attachments/assets/38d8e701-7a99-46aa-8afe-f1ff219c8121" />
 
+<img width="474" height="407" alt="image" src="https://github.com/user-attachments/assets/df0155b7-5b06-4276-aad3-0e114260605d" />
 
 FIGURE-01: RASPBERRY PI PICO PINOUT DIAGRAM
 
