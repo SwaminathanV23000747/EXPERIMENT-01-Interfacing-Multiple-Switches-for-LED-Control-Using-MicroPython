@@ -91,39 +91,43 @@ For communication, I2C (SDA, SCL), SPI (MOSI, MISO, SCK), and UART (TX, RX) inte
 
 ## PROGRAM (MicroPython)
 '''
-```
 ## Experiment 1A:
-
-from machine import Pin
+from machine import Pin, PWM
 import time
-print("Pi Pico")
-led1 = Pin(0, Pin.OUT)
-led2 = Pin(2, Pin.OUT)
-led3 = Pin(4, Pin.OUT)
-buzzer=Pin(4,Pin.OUT)
+
+red_led    = Pin(1, Pin.OUT)
+yellow_led = Pin(7, Pin.OUT)
+green_led  = Pin(14, Pin.OUT)
+buzzer     = PWM(Pin(22))
+
 while True:
-    led1.value(1) 
-    print("LED is ON")
-    time.sleep(1) 
-    led1.value(0)  
-    print("LED is OFF")
+
+    red_led.value(1)
+    print("Red LED is ON")
+    time.sleep(3)
+    red_led.value(0)
+    print("Red LED is OFF")
     time.sleep(1)
-    led2.value(1) 
-    print("LED is ON")
-    time.sleep(1) 
-    led2.value(0)  
-    print("LED is OFF")
+
+    yellow_led.value(1)
+    print("Yellow LED is ON")
+    time.sleep(2)
+    yellow_led.value(0)
+    print("Yellow LED is OFF")
     time.sleep(1)
-    led3.value(1) 
-    print("LED is ON")
-    time.sleep(1) 
-    led3.value(0)  
-    print("LED is OFF")
+
+    green_led.value(1)
+    print("Green LED is ON")
+    time.sleep(4)
+    green_led.value(0)
+    print("Green LED is OFF")
     time.sleep(1)
-    buzzer.value(1) 
+
+    buzzer.freq(1000)
+    buzzer.duty_u16(32768)
     print("Buzzer is ON")
-    time.sleep(1) 
-    buzzer.value(0)  
+    time.sleep(2)
+    buzzer.duty_u16(0)
     print("Buzzer is OFF")
     time.sleep(1)
 
@@ -131,36 +135,39 @@ while True:
 
 
 ## Experiment 1B:
-
-
 from machine import Pin
-import time import sleep 
-switch1=Pin(2,Pin.IN)
-switch2=Pin(3,Pin.IN)
-led1=Pin(13,Pin.OUT)
-led2=Pin(16,Pin.OUT)
-while True:
-    sw1_state=switch1.value()
-    sw2_state=switch2.value()
-    print("Switch 1 State", sw1_state)
-    print("Switch 2 State", sw2_state)
-    led1.value(0)
-    if sw1_state==1 and sw2_state==1:
-        led1.value(0)
-        led2.value(0)
-    elif sw1_state==1:
-        led1.value(1)
-        sleep(0.5)
-        led1.value(0)
-        led2.value(0)
-    elif sw2_state==1:
-        led1.value(0)
-        led2.value(1)
-        sleep(0.5)
-        led2.value(0)
-    sleep(0.5)
+import utime
 
- 
+
+switch1 = Pin(2, Pin.IN, Pin.PULL_DOWN)
+switch2 = Pin(28, Pin.IN, Pin.PULL_DOWN)
+
+
+led_left  = Pin(13, Pin.OUT)
+led_right = Pin(18, Pin.OUT)
+
+print("=== AND Gate Operation Started ===")
+print("Flip BOTH switches to turn LEDs ON\n")
+
+prev_state = None
+
+while True:
+    s1 = switch1.value()
+    s2 = switch2.value()
+
+    result = s1 and s2
+
+    led_left.value(result)
+    led_right.value(result)
+
+    current_state = (s1, s2, result)
+    if current_state != prev_state:
+        print(f"Switch1: {'ON ' if s1 else 'OFF '}  |  Switch2: {'ON ' if s2 else 'OFF '}  |  AND Result: {'1 →  LEDs ON' if result else '0 →  LEDs OFF'}")
+        prev_state = current_state
+
+    utime.sleep(0.05)
+
+
 
 ## OUTPUT
 
