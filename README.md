@@ -2,13 +2,13 @@
 
 
  
-## NAME:
+## NAME: Swaminathan.V
 
-## DEPARTMENT:
+## DEPARTMENT: CSE-IOT
 
-## ROLL NO:
+## ROLL NO:212223110057
 
-## DATE OF EXPERIMENT:
+## DATE OF EXPERIMENT:21-04-2026
 
 ## AIM
 
@@ -90,8 +90,8 @@ For communication, I2C (SDA, SCL), SPI (MOSI, MISO, SCK), and UART (TX, RX) inte
 4. Connect the other terminals of the switches to GND.
 
 ## PROGRAM (MicroPython)
-''''
-
+'''
+```
 ## Experiment 1A:
 
 from machine import Pin
@@ -170,28 +170,36 @@ while True:
 
 
 ## FIGURE-04: CIRCUIT CONNECTION
+<img width="729" height="496" alt="Screenshot 2026-04-21 140249" src="https://github.com/user-attachments/assets/78f5ac96-f018-4787-a21d-29a7655f37fe" />
 
 
 
 ## FIGURE-05: CODE EXECUTION OUTPUT
 
+<img width="245" height="220" alt="Screenshot 2026-04-21 140404" src="https://github.com/user-attachments/assets/10e6ea57-2928-40ec-99b7-710ab9c01a59" />
 
 
 ## FIGURE-06: LED AND BUZZER STATUS
+<img width="736" height="481" alt="Screenshot 2026-04-21 140240" src="https://github.com/user-attachments/assets/12140e74-c64f-4ea8-a780-83ce8b2abf68" />
+<img width="729" height="496" alt="Screenshot 2026-04-21 140249" src="https://github.com/user-attachments/assets/8c3823cd-2caa-43ae-bc1f-97da24e16747" />
+<img width="729" height="496" alt="Screenshot 2026-04-21 140249" src="https://github.com/user-attachments/assets/5c867baf-2ba0-453a-b5e9-15d0e1ab64ed" />
 
 
 ## Experiment 1B:
 
 
 ## FIGURE-07: CIRCUIT CONNECTION
+<img width="862" height="618" alt="image" src="https://github.com/user-attachments/assets/abe56a65-b1b8-43df-be9a-cb41d566f772" />
 
 
 
 ## FIGURE-08: CODE EXECUTION OUTPUT
 
+<img width="622" height="100" alt="image" src="https://github.com/user-attachments/assets/ca23e0bf-683c-410a-bb69-47152104dd53" />
 
 
 ## FIGURE-09: LED STATUS BASED ON SWITCH INPUTS
+<img width="749" height="468" alt="Screenshot 2026-04-21 144057" src="https://github.com/user-attachments/assets/948598b1-577b-4308-ab6c-9947eafa0e4e" />
 
 
 ## RESULTS
