@@ -189,8 +189,7 @@ while True:
 ## FIGURE-06: LED AND BUZZER STATUS
 <img width="736" height="481" alt="Screenshot 2026-04-21 140240" src="https://github.com/user-attachments/assets/12140e74-c64f-4ea8-a780-83ce8b2abf68" />
 <img width="729" height="496" alt="Screenshot 2026-04-21 140249" src="https://github.com/user-attachments/assets/8c3823cd-2caa-43ae-bc1f-97da24e16747" />
-<img width="729" height="496" alt="Screenshot 2026-04-21 140249" src="https://github.com/user-attachments/assets/5c867baf-2ba0-453a-b5e9-15d0e1ab64ed" />
-
+<img width="842" height="499" alt="Screenshot 2026-04-21 140256" src="https://github.com/user-attachments/assets/7c0a236d-b9f6-454a-ac3d-2cb22d4df1a5" />
 
 ## Experiment 1B:
 
